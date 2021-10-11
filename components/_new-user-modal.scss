@@ -1,0 +1,17 @@
+ .gc-new-user-modal {
+    display: flex;
+    flex-direction: column;
+    width: 648px;
+    height: 376px;
+    padding: 24px 32px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+    gap: 16px;
+
+    @media screen and (max-width: 600px) {
+        width: 96%;
+        border-radius: 8px;
+        padding: 16px;
+      }
+  }

@@ -1,0 +1,42 @@
+.gc-delete-modal {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 400px;
+    padding: 24px 32px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+
+    @media screen and (max-width: 600px) {
+        width: 96%;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+    .warning-draw {
+        width: 320px;
+        margin: auto;
+
+        @media screen and (max-width: 600px) {
+            width: 280px;
+          }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .modal-warning-text {
+        font-size: 18px;
+        margin: 16px 0;
+        font-weight: bold;
+        margin: auto;
+    }
+
+    .modal-footer {
+        .buttons-box {
+            margin: auto;
+        }
+    }
+}

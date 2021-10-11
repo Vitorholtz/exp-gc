@@ -1,0 +1,301 @@
+.gc-tabs {
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+    gap: 4px;
+
+    .tab-box {
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      border-bottom: 2px $TertiaryGray solid;
+      transition: .3s;
+
+      &:hover {
+        border-bottom: 2px $PrimaryPurple solid;
+      }
+
+      &--active {
+        border-bottom: 2px $PrimaryPurple solid;
+      }
+      .tab-title {
+        color: $PrimaryGray;
+      }
+    }
+  }
+  
+  // TABELA DESKTOP GLOBO CASTING
+
+  .gc-table-wrapper {
+    width: 100%;
+
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+
+    .gc-table {
+      width: 100%;
+      font-family: "GlobotipoTextoRegular";
+      font-size: 16px;
+      color: $PrimaryGray;
+      border-collapse: collapse;
+
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
+
+      tr {
+        position: relative;
+        transition: .3s;
+
+        &:not(:first-child) {
+          border-bottom: 1px $BorderGray solid;
+        }
+
+        &:hover:not(:first-child) {
+          background-color: #f6f6f6;
+
+          td {
+            .table-button {
+              .table-btn-text {
+                color: $PrimaryPurple;
+                @media screen and (max-width: 600px) {
+                  color: initial;
+                }
+              }
+              .table-btn-icon {
+                filter: invert(29%) sepia(312%) saturate(6609%) hue-rotate(248deg) brightness(88%) contrast(94%);
+                @media screen and (max-width: 600px) {
+                  filter: none;
+                }
+              }
+            }
+          }
+
+          @media screen and (max-width: 600px) {
+            background-color: initial;
+          }
+        }
+        
+        th {
+          color: $PrimaryPurple;
+          text-align: left;
+          padding-left: 8px;
+          font-family: "GlobotipoTextoBold";
+        }
+
+        td {
+          padding: 16px 8px;
+          width: auto;
+
+          &:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+          }
+
+          .table-btn-divider {
+            width: 1px;
+            height: 16px;
+            background-color: $BorderGray;
+            margin: 0px 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // TABELA MOBILE GLOBOCASTING
+  .gc-mobile-table-container{
+    width: 100%;
+    display: none;
+
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+
+    .m-table-category {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "GlobotipoTextoRegular";
+      font-size: 16px;
+      color: $PrimaryGray;
+      border-bottom: 1px $BorderGray solid;
+      padding: 16px 8px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+        gap: 32px;
+      }
+
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        padding-right: 8px;
+        gap: 4px;
+
+        .user-name {
+          font-family: "GlobotipoTextoBold";
+          word-break: break-all;
+        }
+
+        .user-email {
+          font-family: "GlobotipoTextoRegular";
+          font-size: 16px;
+          color: $PrimaryGray;
+          word-break: break-all;
+        }
+
+        .user-profile {
+          font-family: "GlobotipoTextoRegular";
+          font-size: 16px;
+          color: $SecondaryGray;
+          word-break: break-all;
+        }
+      }
+      .m-table-buttons {
+        display: flex;
+
+        .table-button {
+
+            .table-btn-text {
+                @media screen and (max-width: 600px) {
+                    display: none;
+                  }
+            }
+        }
+
+        .table-btn-divider {
+          width: 1px;
+          height: 16px;
+          background-color: $BorderGray;
+          margin: 0px 12px;
+        }
+      }
+    }
+  }
+
+    // CONTAINER DOS PERFIS
+
+    .gc-profiles-container {
+        width: 100%;
+        margin-top: 24px;
+        border-radius: 16px;
+        border: 1px $BorderGray solid;
+        font-size: 16px;
+        font-family: "GlobotipoTextoRegular";
+    
+        .profile-container {
+          width: 100%;
+    
+          .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            justify-content: space-between;
+    
+            .profile-info {
+              display: flex;
+    
+              @media screen and (max-width: 360px) {
+                flex-direction: column;
+              }
+    
+              .profile-type {
+                font-size: 16px;
+                font-family: "GlobotipoTextoBold";
+                color: $PrimaryPurple;
+    
+                @media screen and (max-width: 600px) {
+                  font-size: 14px;
+                }
+    
+                @media screen and (max-width: 600px) {
+                  margin-right: 16px;
+                }
+    
+                @media screen and (max-width: 360px) {
+                  margin-right: 0px;
+                  margin-bottom: 4px;
+                }
+              }
+              .divider {
+                width: 1px;
+                height: 16px;
+                background-color: #D8D8D8;
+                margin: 0px 16px;
+      
+                @media screen and (max-width: 600px) {
+                  display: none;
+                }
+              }
+              .profile-code {
+                font-size: 16px;
+                font-family: "GlobotipoTextoRegular";
+                color: #4f5257;
+    
+                @media screen and (max-width: 600px) {
+                  font-size: 14px;
+                }
+    
+              }
+            }
+    
+            .profile-table-buttons {
+              display: flex;
+    
+              .table-button {
+                .table-btn-text {
+                  @media screen and (max-width: 600px) {
+                    display: none;
+                  }
+                }
+              }
+              .table-btn-divider {
+                width: 1px;
+                height: 16px;
+                background-color: #D8D8D8;
+                margin: 0px 16px;
+              }
+            }
+          }
+    
+          .profile-permissions-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 16px;
+            border-top: 1px #d8d8d8 solid;
+            background-color: #f6f6f6;
+    
+    
+            .permissions-title {
+              font-size: 16px;
+              font-family: "GlobotipoTextoBold";
+              color: #4f5257;
+    
+              @media screen and (max-width: 600px) {
+                font-size: 14px;
+              }
+            }
+    
+            .permission-tag {
+              padding: 4px 16px;
+              background-color: white;
+              border: 1px #d8d8d8 solid;
+              border-radius: 50px;
+              font-size: 14px;
+              font-family: "GlobotipoTextoRegular";
+              color: #4f5257;
+    
+              @media screen and (max-width: 600px) {
+                font-size: 12px;
+              }
+    
+            }
+          }
+        }
+      }

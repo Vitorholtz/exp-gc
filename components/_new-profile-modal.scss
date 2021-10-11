@@ -1,0 +1,23 @@
+.gc-new-profile-modal {
+    display: flex;
+    flex-direction: column;
+    width: 648px;
+    height: 496px;
+    padding: 24px 32px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+    gap: 16px;
+  
+    @media screen and (max-width: 600px) {
+      width: 96%;
+      height: 520px;
+      border-radius: 8px;
+      padding: 16px;
+    }
+  
+    @media screen and (max-height: 620px) {
+      height: 520px;
+      width: 100%;
+    }
+}
